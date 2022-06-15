@@ -21,6 +21,8 @@ score3 = parseFloat(prompt("Score 3?"));
 
 let avg = (score1 + score2 + score3) / denominator;
 
+console.log("Average of the test scores were: " + avg);
+
 if(avg >= 92.5){
     console.log("You get an A!");
 }
