@@ -1,18 +1,25 @@
-let score1 = parseInt(prompt("Please enter your first score: "));
-let score2 = parseInt(prompt("Please input your second score: "));
-let score3 = parseInt(prompt("Please input your third score: "));
-let averageScore = (score1+score2+score3)/3;
-let letterGrade = "F";
-if(averageScore > 92.5){
-    letterGrade = "A";
+let peopleNum = parseInt(prompt("How many people do you know?"));
+const peopleList = [];
+let nameLength = 0;
+let shortestNameLength = 100;
+let names = [];
+longestNameIndex = 0;
+for(let i = 0; i<peopleNum; i++){
+    peopleList[i] = prompt("Please input the name of a person you know:");
 }
-else if(averageScore > 84.5){
-    letterGrade = "B";
+for(let i = 0; i<peopleList.length; i++){
+    names = peopleList[i].split(" ");
+    if(names[1].length > nameLength){
+        nameLength = names[1].length;
+        longestNameIndex = i;
+    }
+    if(names[1].length < shortestNameLength){
+        shortestNameLength = names[1].length;
+    }
 }
-else if(averageScore > 77.5){
-    letterGrade = "C";
+console.log("The person you know with the longest last name is: "+peopleList[longestNameIndex]);
+console.log("The length of last names of people you submitted was from "+shortestNameLength+" to "+nameLength);
+console.log("The people you submitted were: ");
+for(let i = 0; i<peopleList.length; i++){
+    console.log(peopleList[i]);
 }
-else if(averageScore > 69.5){
-    letterGrade = "D";
-}
-console.log("Your average score is "+averageScore+", making your grade a "+letterGrade);
