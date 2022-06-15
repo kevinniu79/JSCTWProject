@@ -44,25 +44,29 @@ if(avg < 69.5){
 
 let people;
 const peopleNames = [];
+let biggest;
 let smallest;
 
 people = parseFloat(prompt("Number of People you know?"));
 for(let i = 0; i < people; i++){
-    peopleNames[i] = prompt("Name of person " + i + "?");
-    let biggest = peopleNames[0];
-    if(i == 1){
-        smallest = peopleNames[1];
+    let names = prompt("Name of person " + (i+1) + "?");
+    peopleNames.push(names);
+}
+for(let count = 0; count < people; count++){
+    biggest = peopleNames[0];
+    smallest = peopleNames[1];
+    if(peopleNames[count].length > biggest.length){
+        biggest = peopleNames[count];
     }
-    if(peopleNames[i].length > biggest.length){
-        biggest = peopleNames[i];
-    }
-    if(peopleNames[i].length<smallest.length){
-        smallest = peopleNames[i];
+    if(peopleNames[count].length<smallest.length){
+        smallest = peopleNames[count];
     }
 }
 
 console.log("Longest name: " + biggest);
 console.log("Range of lengths: " + smallest + " to " + biggest);
 
-
+for(let num = 0; num < people; num++){
+    console.log("Name of person " + (num + 1) + ": " + peopleNames[num]);
+}
 
