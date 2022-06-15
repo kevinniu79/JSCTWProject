@@ -13,21 +13,21 @@ let scoreTwo = parseFloat(prompt("Please enter the second test score"));
 let scoreThree = parseFloat(prompt("Please enter the third test score"));
 
 let averageScore = (scoreOne + scoreTwo + scoreThree)/3
-let grade = "C";
+let letterGrade = "F";
 
 if(averageScore >= 92.5) {
-    grade = "A";
+    letterGrade = "A";
 }
 else if(averageScore >= 84.5) {
-    grade = "B";
+    letterGrade = "B";
 }
 else if(averageScore >= 77.5) {
-    grade = "C";
+    letterGrade = "C";
 }
 else if(averageScore >= 69.5) {
-    grade = "D";
+    letterGrade = "D";
 }
 
-console.log("The average of the three score is " + averageScore + ". The letter grade is " + grade);
+console.log("The average of the three score is " + averageScore + ". The letter grade is " + letterGrade);
 
 
