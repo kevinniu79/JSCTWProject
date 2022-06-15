@@ -10,6 +10,8 @@ let volume;
 volume = side1 * side2 * side3;
 console.log("Volume: " + volume);
 */
+
+/*
 let score1;
 let score2;
 let score3;
@@ -38,3 +40,29 @@ if(avg >= 69.5 && avg < 77.5){
 if(avg < 69.5){
     console.log("You get an F!");
 }
+*/
+
+let people;
+const peopleNames = [];
+let smallest;
+
+people = parseFloat(prompt("Number of People you know?"));
+for(let i = 0; i < people; i++){
+    peopleNames[i] = prompt("Name of person " + i + "?");
+    let biggest = peopleNames[0];
+    if(i == 1){
+        smallest = peopleNames[1];
+    }
+    if(peopleNames[i].length > biggest.length){
+        biggest = peopleNames[i];
+    }
+    if(peopleNames[i].length<smallest.length){
+        smallest = peopleNames[i];
+    }
+}
+
+console.log("Longest name: " + biggest);
+console.log("Range of lengths: " + smallest + " to " + biggest);
+
+
+
