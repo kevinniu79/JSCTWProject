@@ -32,7 +32,7 @@ else{
 */
 //Finding out how many people the person knows and adding it to a names array
 let numPeople = prompt("Please enter how many people you know");
-numPeople = parseInt(prompt);
+numPeople = parseInt(numPeople);
 const names=[];
 let i;
 for(i = 0; i < numPeople; i++){
