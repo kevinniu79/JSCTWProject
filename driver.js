@@ -1,31 +1,17 @@
 
 
-let one = prompt("What is the score? ");
-one = parseInt(one); 
-let two = prompt("What is the score"); 
-two = parseInt(two); 
-let three = prompt("What is the score? "); 
-three = parseInt(three); 
+let numberOfPeople = prompt("How many people do you know? ");
+numberOfPeople = parseInt(numberOfPeople); 
 
-let avg = (one+two+three)/3; 
-
-console.log("Average test score: " + avg);
-
-let letter = "A"
-if(avg >= 92.5){
- letter = "A"; 
-}
-else if(avg >= 84.5){
-    letter = "B"; 
-}
-else if(avg >= 77.5){
-    letter = "C"; 
-}
-else if(avg >= 69.5){
-    letter = "D"; 
-}
-else{
-    letter = "F"; 
+const arr = []; 
+for(let i = 0; i<numberOfPeople; i++){
+let name = prompt("What are the names of those people? ");
+arr[i] = name; 
 }
 
-console.log("Letter grade: " + letter);  
+for(let i = 0; i<arr.length - 1; i++){
+    let blank = arr[i].indexOf(" ");
+    let lastName = arr[i].substring(blank, arr[i].length - 1); 
+    console.log(lastName); 
+}
+
