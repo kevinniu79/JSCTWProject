@@ -46,6 +46,7 @@ let people;
 const peopleNames = [];
 let biggest;
 let smallest;
+let biggestFullName;
 
 people = parseFloat(prompt("Number of People you know?"));
 
@@ -55,11 +56,12 @@ for(let i = 0; i < people; i++){
     peopleNames.push(names);
 }
 
-//Finding biggest name length
+//Finding biggest last name length
 for(let count = 0; count < people; count++){
-    biggest = peopleNames[0];
-    if(peopleNames[count].length > biggest.length){
-        biggest = peopleNames[count];
+    biggest = peopleNames[0].substring(peopleNames[0].indexOf(" "), peopleNames[0].length+1);
+    if(peopleNames[count].substring(peopleNames[count].indexOf(" "), peopleNames[count].length+1).length > biggest.length){
+        biggest = peopleNames[count].substring(peopleNames[count].indexOf(" "), peopleNames[count].length+1);
+        biggestFullName = peopleNames[count];
     }
 }
 
@@ -72,8 +74,8 @@ for(let some = 0; some < people; some++){
 }
 
 //Displaying the longest and range of lenghts
-console.log("Longest name: " + biggest);
-console.log("Range of lengths: " + smallest.length + " to " + biggest.length);
+console.log("Longest last name: " + biggest);
+console.log("Range of lengths: " + smallest.length + " to " + biggestFullName.length);
 
 //Displaying all the names
 for(let num = 0; num < people; num++){
