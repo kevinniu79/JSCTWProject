@@ -46,7 +46,7 @@ let currMin = names[0].length;
 //Finding and displaying the longest last name
 for(let i = 1; i < names.length; i++){
     if(names[i].length - names[i].indexOf(" ") > curr){
-        curr = names[i].length;
+        curr = names[i].length - names[i].indexOf(" ");
         j = i;
     }
 }
