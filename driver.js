@@ -42,6 +42,7 @@ if(avg < 69.5){
 }
 */
 
+/*
 let people;
 const peopleNames = [];
 let biggest;
@@ -81,4 +82,50 @@ console.log("Range of lengths: " + smallest.length + " to " + biggestFullName.le
 for(let num = 0; num < people; num++){
     console.log("Name of person " + (num + 1) + ": " + peopleNames[num]);
 }
+*/
+let people;
+const peopleNames = [];
+let lastName;
+
+
+people = parseFloat(prompt("Number of People you know?"));
+
+//Adding names to list
+
+for(let i = 0; i < people; i++){
+    let fullNames = prompt("Name of person " + (i+1) + "?");
+    peopleNames.push(fullNames);
+}
+let finalBiggest;
+
+function names(peopleNames){
+let biggestLast = peopleNames[0];
+let biggestLastCurrent = biggestLast.indexOf(" ");
+finalBiggest = biggestLast.substring(biggestLastCurrent);
+
+for(let count = 0; count < people; count++){
+    current = peopleNames[count];
+    let spaceCurrent = current.indexOf(" ");
+    let lastCurrent = current.substring(spaceCurrent);
+
+    if(lastCurrent.length > finalBiggest.length){
+        finalBiggest = peopleNames[count];
+    }
+}
+console.log("");
+
+}
+
+const nameObj = {
+    fullName : finalBiggest
+};
+
+names(nameObj);
+
+
+
+
+
+
+
 
