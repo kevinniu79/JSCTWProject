@@ -34,30 +34,29 @@ else{
 let numPeople = prompt("Please enter how many people you know");
 numPeople = parseInt(numPeople);
 const names=[];
-let i;
-for(i = 0; i < numPeople; i++){
+for(let i = 0; i < numPeople; i++){
     let name = prompt("Please enter the name of someone you know");
     names.push(name);
 }
 //Setting variables
-let curr = names[0];
+let j = 0;
+let curr = names[0].length - names[0].indexOf(" ");
 let currMax = names[0].length;
 let currMin = names[0].length;
 //Finding and displaying the longest last name
-let j;
-for(j = 1; i < names.length; i++){
-    if(names[j].length - names[i].indexOf(" ") > curr){
-        curr = names[i];
+for(let i = 1; i < names.length; i++){
+    if(names[i].length - names[i].indexOf(" ") > curr){
+        curr = names[i].length;
+        j = i;
     }
 }
-console.log(curr);
+console.log(names[j]);
 //Finding and displaying the range for length of names
-let k;
-for(k = 1; i < names.length; i++){
-    if(names[k].length > names[0].length){
+for(let i = 1; i < names.length; i++){
+    if(names[i].length > names[0].length){
         currMax = names[i].length;
     }
-    if(names[k].length < names[0].length){
+    if(names[i].length < names[0].length){
         currMin = names[i].length;
     }
 }
