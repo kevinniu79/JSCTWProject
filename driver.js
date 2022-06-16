@@ -11,8 +11,12 @@ arr[i] = name;
 
 for(let i = 0; i<arr.length; i++){
     let blank = arr[i].indexOf(" ");
-    let lastName = arr[i].substring(blank, arr[i].length - 1); 
+    let lastName = arr[i].substring(blank, arr[i].length);  
+   console.log( Math.max(lastName.length - 1)); 
+}
+for(let i = 0; i<arr.length; i++){
+    let blank = arr[i].indexOf(" ");
+    let lastName = arr[i].substring(blank, arr[i].length);  
     console.log(lastName); 
-   console.log( Math.max(arr[i])); 
 }
 
