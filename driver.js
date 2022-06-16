@@ -73,7 +73,7 @@ for(let some = 0; some < people; some++){
 
 //Displaying the longest and range of lenghts
 console.log("Longest name: " + biggest);
-console.log("Range of lengths: " + smallest + " to " + biggest);
+console.log("Range of lengths: " + smallest.length + " to " + biggest.length);
 
 //Displaying all the names
 for(let num = 0; num < people; num++){
