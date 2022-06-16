@@ -9,9 +9,10 @@ let name = prompt("What are the names of those people? ");
 arr[i] = name; 
 }
 
-for(let i = 0; i<arr.length - 1; i++){
+for(let i = 0; i<arr.length; i++){
     let blank = arr[i].indexOf(" ");
     let lastName = arr[i].substring(blank, arr[i].length - 1); 
     console.log(lastName); 
+   console.log( Math.max(arr[i])); 
 }
 
