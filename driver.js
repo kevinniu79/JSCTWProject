@@ -55,15 +55,19 @@ for(let i = 0; i < people; i++){
     peopleNames.push(names);
 }
 
-//Comparing name lengths
+//Finding biggest name length
 for(let count = 0; count < people; count++){
     biggest = peopleNames[0];
-    smallest = peopleNames[1];
     if(peopleNames[count].length > biggest.length){
         biggest = peopleNames[count];
     }
-    if(peopleNames[count].length<smallest.length){
-        smallest = peopleNames[count];
+}
+
+//Finding smallest name length
+for(let some = 0; some < people; some++){
+    smallest = peopleNames[0];
+    if(peopleNames[some].length<smallest.length){
+        smallest = peopleNames[some];
     }
 }
 
