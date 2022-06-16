@@ -48,10 +48,14 @@ let biggest;
 let smallest;
 
 people = parseFloat(prompt("Number of People you know?"));
+
+//Adding names to list
 for(let i = 0; i < people; i++){
     let names = prompt("Name of person " + (i+1) + "?");
     peopleNames.push(names);
 }
+
+//Comparing name lengths
 for(let count = 0; count < people; count++){
     biggest = peopleNames[0];
     smallest = peopleNames[1];
@@ -63,9 +67,11 @@ for(let count = 0; count < people; count++){
     }
 }
 
+//Displaying the longest and range of lenghts
 console.log("Longest name: " + biggest);
 console.log("Range of lengths: " + smallest + " to " + biggest);
 
+//Displaying all the names
 for(let num = 0; num < people; num++){
     console.log("Name of person " + (num + 1) + ": " + peopleNames[num]);
 }
